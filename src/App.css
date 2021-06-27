@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+button
+{
+  font-family : Arial ;
+  color :white;
+  margin-top: 50px;
+  padding: 15px 35px;
+  border-radius:10px;
+  background: linear-gradient(rgb(0, 162, 255),rgb(100, 45, 189), rgb(14, 14, 136)); 
+  font-size: 1.2em;
+  font-weight: bold;
+}
