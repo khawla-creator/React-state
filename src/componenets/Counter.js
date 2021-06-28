@@ -7,7 +7,6 @@ export default class Counter extends Component {
                     constructor(props){
                     super(props);
                     this.state={
-                    count:0,
                     fullName: "Khawla Guesmi",
                     bio: [ 
                     " Methods agent for 6 months",
@@ -16,12 +15,23 @@ export default class Counter extends Component {
                     ],
                     imgsrc : IMG,
                     profession :'Future Devlopper',
+                    date: new Date()
                     }
                     }
-                    componentDidMount(){
-                        this.time = setInterval(() => this.tick(),10000)
+                    componentDidMount() {
+                        this.timerID = setInterval(
+                          () => this.tick(),
+                          1000
+                        );
+                      }
+                                        
+                    tick() {
+                        this.setState({
+                        date: new Date()
+                        });
                     }
-                    render() {
+
+                  render() {
                     return (
                                         <div className="counterProfile">
                                         <img alt= 'mine' src={this.state.imgsrc}/>
@@ -31,6 +41,7 @@ export default class Counter extends Component {
                                         )}
                                         </div>
                                         <h1> {this.state.profession} </h1>
+                                        <h2> Time: {this.state.date.toLocaleTimeString()}</h2>
                                         </div>
                     )
 }

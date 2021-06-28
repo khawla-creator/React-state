@@ -13,8 +13,10 @@ class App  extends React.Component {
        <button classeName='buttonCoutener' onClick={()=>this.setState({show:!this.state.show})}> Show me  </button>
      {
       this.state.show &&   <Counter />
+
     }
-      <h1 style={{fontSize: '3em',padding: '100px', fontFamily: 'Cambria'}}> HELLO EVERYONE ! </h1>
+    {!this.state.show &&   <h1 style={{fontSize: '3em',padding: '100px', fontFamily: 'Cambria'}}> HELLO EVERYONE ! </h1>      }
+     
       
       </div>
     )

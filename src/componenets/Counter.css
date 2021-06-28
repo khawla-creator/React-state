@@ -10,12 +10,19 @@
 
 }
 
-.counterProfile h1 
+.counterProfile h1
 {
                     font-family: Cambria;
                     font-size: 2em;
                     color:  rgb(20, 20, 189);
 }
+
+h2{
+                    font-family: Cambria;
+                    font-size: 2em;
+                    color : black              
+}
+
 
 .listBio
 {
